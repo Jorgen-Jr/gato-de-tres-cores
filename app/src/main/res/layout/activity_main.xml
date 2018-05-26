@@ -7,21 +7,28 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Olá Mundo!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnButao"
+        android:id="@+id/BotaoHelloWorld"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        android:visibility="visible"
-        tools:layout_editor_absoluteX="154dp"
-        tools:layout_editor_absoluteY="295dp" />
+        android:layout_marginBottom="77dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="121dp"
+        android:onClick="Botao_Click"
+        android:text="Um Botao... BUNITO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </android.support.constraint.ConstraintLayout>

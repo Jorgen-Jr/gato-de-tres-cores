@@ -1,31 +1,30 @@
 package com.aniiki.fisrtapp;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends Activity
+{
+    /** Chamada para quando a aplicação for criada. */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.getMenuInflater().inflate(R.menu.main, menu);
-
-        Button butao = (Button)findViewById(R.id.btnButao);
-
-    butao.setOnClickListener(new OnClickListener(){
-        @Override
-        public void onClick(View view) {
-            Toast.makeText(MainActivity.this, "BOTÃO CLICADO", Toast.LENGTH_SHORT).show();
+    public void botao_Click(View v)
+    {
+        if(v.getId() == R.id.BotaoHelloWorld)
+        {
+            Mensagem("Olá Mundo!");
         }
-        });
-        return true;
+    }
 
-}
+    public void Mensagem(String message)
+    {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
 }
